@@ -1,0 +1,30 @@
+; 1. "Design Recipe"
+; 2. Expressions vs. Functions
+; 3. Create a function!
+; 3a. Perfect circle creator. Automated.
+(require 2htdp/image) ; This is a library.
+
+(circle 45 "solid" "blue")
+
+(circle 50 "outline" "purple") ; Expression #2
+
+(circle 60 "solid" "black") ; Expression #3
+
+; A function should save time and effort through automation
+(define (y x) (* x x))
+(define (stupid_y x) (* x x)) (stupid_y 1)
+(* 1 1) (* 2 2)
+(stupid_y 2) (stupid_y 3)
+
+
+(define (tip p s) (* (/ p 100) s))
+
+(tip 25 8.50)
+
+; add a function to function
+
+(define (total_with_tip p s) (+ (tip p s) s))
+
+; This one tells you the total with tip,
+
+(total_with_tip 25 8.50)
